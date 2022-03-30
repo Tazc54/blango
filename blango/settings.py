@@ -36,6 +36,7 @@ class Dev(Configuration):
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SAMESITE = 'None'
     SESSION_COOKIE_SAMESITE = 'None'
+    AUTH_USER_MODEL = "blango_auth.User"
 
     #Crispy forms
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -52,6 +53,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         #'django.template.context_processors.csrf',
+        'blango_auth',
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
