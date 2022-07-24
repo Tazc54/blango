@@ -22,6 +22,10 @@ class Dev(Configuration):
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
     
     ACCOUNT_ACTIVATION_DAYS = 7
+    
+    MEDIA_ROOT = BASE_DIR / "media"
+
+    MEDIA_URL = "/media/"
 
 
     # Quick-start development settings - unsuitable for production
@@ -102,7 +106,8 @@ class Dev(Configuration):
         'allauth.socialaccount.providers.google',
         'rest_framework',
         'rest_framework.authtoken',
-        'drf_yasg'
+        'drf_yasg',
+        'versatileimagefield'
     ]
 
     MIDDLEWARE = [
